@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olabisi Olaoye</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./img/O.png">
+    <link rel="stylesheet" href="tailwind.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+<body class="bg-body text-black font-inter px-14">
+    <!-- Header section -->
+    <header class="py-10">
+        <div class="container flex justify-between items-center mx-auto px-10 md:px-15 lg:px-25 w-full">
+            <div class="text-lg font-medium"><a href="./index.html">Olabisi Olaoye</a></div>
+            <div class="hidden md:flex space-x-9 items-center">
+                <a href="./about.html" class="text-theme">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact"><button class="px-6 py-2 bg-theme text-white rounded font-medium">Hire me</button></a>
+            </div>
+            <div class="md:hidden">
+                <button class="menu-button">
+                    <svg width="26" height="18" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 17.5H0.25V14.6667H13V17.5ZM25.75 10.4167H0.25V7.58333H25.75V10.4167ZM25.75 3.33333H13V0.5H25.75V3.33333Z" fill="black"/></svg>
+                </button>
+            </div>
+        </div>
+        <div class="mobile-menu hidden mt-40 font-bold text-2xl text-lighter space-y-14 text-center">
+            <a class="block" href="./about.html">About</a>
+            <a class="block" href="#projects">Projects</a>
+            <a class="block" href="#contact">Hire me</a>
+        </div>
+    </header>
+
+	<div class="container hide-menu-1 h-min flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
+		<div class="flex flex-wrap md:flex-nowrap">
+            <div class="flex mt-4 flex-wrap items-center justify-center my-32 py-20">
+                <h1 class="font-normal text-lighter text-center text-2xl md:text-3xl lg:text-4xl">
+                    I'm Olabisi, a <span class="hib">frontend developer</span> and <span class="ux">user experience designer.</span> 
+                    Normally I'm an introvert, but I've found the best way to communicate with people is <span id="through">through my designs.</span>
+                </h1>
+                <div class="w-full py-6 flex justify-center">
+                    <a href="./about.html" class="px-8 py-4 bg-white transition ease-out delay-150 duration-300 hover:bg-theme hover:text-white border border-theme text-theme font-normal rounded flex items-center space-x-3">
+                        <span>More about me</span>
+                    </a>
+                </div>
+            </div>
+	    </div>
+    </div>
+
+    <div class="container hide-menu-2 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
+        <section class="w-full">
+            <h2 id="projects" class="secondary-title">Projects</h2>
+            <p class="section-paragraph">I’ve learned a great deal about frontend development working with my colleagues and senior developers.</p>
+
+            <div class="grid grid-cols-2 gap-6 mt-6 rounded">
+                <img src="https://images.unsplash.com/photo-1576153192396-180ecef2a715?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80" class="w-full rounded-md bg-nav h-36 lg:h-64 object-cover">
+				<img src="https://images.unsplash.com/photo-1545235617-9465d2a55698?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" class="w-full rounded-md bg-nav h-36 lg:h-64 object-cover">
+				<img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80" class="w-full rounded-md md:block bg-nav h-36 lg:h-64 object-cover">
+				<img src="https://images.unsplash.com/photo-1558655146-d09347e92766?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=764&q=80" class="w-full rounded-md md:block bg-nav h-36 lg:h-64 object-cover">
+            </div>
+        </section>
+    </div>
+    
+    
+</body>
+<script>
+    const btn = document.querySelector('.menu-button');
+    const menu =  document.querySelector('.mobile-menu');
+    const hidebody1 = document.querySelector('.hide-menu-1');
+    const hidebody2 = document.querySelector('.hide-menu-2');
+
+    btn.addEventListener('click', () => {
+	    menu.classList.toggle("hidden");
+        hidebody1.classList.toggle('hidden');
+        hidebody2.classList.toggle('hidden');
+    })
+</script>
+<script type="module">
+    import { annotate } from 'https://unpkg.com/rough-notation?module';
+
+    const n1 = document.querySelector('.hib');
+    const n2 = document.querySelector('#through');
+    const n3 = document.querySelector('.ux');
+
+    const a1 = annotate(n1, { type: 'highlight', color: 'yellow', iterations: 1, multiline: true });
+    const a2 = annotate(n2, {type: 'underline', color: 'red', multiline:true});
+    const a3 = annotate(n3, { type: 'highlight', color: 'yellow', iterations: 1, multiline: true })
+     
+    a1.show();
+    a2.show();
+    a3.show();
+</script>
+</html>
